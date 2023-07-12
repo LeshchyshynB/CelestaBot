@@ -10,7 +10,7 @@ class Main():
 		"C1_0": 'handler/levels/c1_0.txt'
 		}
 		Logging.setting(min_console=10)
-		Logging.info(f"Wait {wait} seconds...")
+		Logging.info(f"Wait {wait} seconds (alt+tab to game)...")
 		sleep(wait)
 		Logging.info("Starting level...")
 		Handler(self.commands_entry[level])	
