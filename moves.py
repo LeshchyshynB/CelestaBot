@@ -4,7 +4,8 @@ import ctypes
 
 class Moves(KEY_MAPPING):
 	def __init__(self):
-		super(Moves, self).__init__()		#init buttons
+		super(Moves, self).__init__()		
+		#init buttons
 		self.jump = self.get_key("c")
 		self.right = self.get_key("right")
 		self.left = self.get_key("left")
@@ -19,6 +20,10 @@ class Moves(KEY_MAPPING):
 
 	def climb_down(self, time):
 		self.hold_press([self.catch], self.down, time)
+
+	def climb_jump(self, time):
+		self.hold_press([self.catch, self.up], self.jump, time)
+
 
 	#standart move
 	def move_jump(self, time):
@@ -68,3 +73,10 @@ class Moves(KEY_MAPPING):
 
 	def dash_down_left(self, time):
 		self.hold_press([self.down, self.left], self.dash, time)
+
+	#longjumps
+	def long_jump_right(self, time):
+		self.hold_press([self.right, self.jump], self.dash, time)
+
+	def long_jump_left(self, time):
+		self.hold_press([self.left, self.jump], self.dash, time)
