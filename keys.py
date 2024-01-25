@@ -130,7 +130,7 @@ class KEY_MAPPING:
 		    })
 
 		for c in range(32, 128):
-		    self.keyboardMapping[chr(c)] = ctypes.windll.user32.VkKeyScanA(ctypes.wintypes.WCHAR(chr(c)))
+			self.keyboardMapping[chr(c)] = ctypes.windll.user32.VkKeyScanA(ctypes.wintypes.WCHAR(chr(c)))
 
 		self.KEYEVENT_DOWN = 0x0000
 		self.KEYEVENT_UP = 0x0002
